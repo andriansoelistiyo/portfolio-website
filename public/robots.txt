@@ -1,11 +1,11 @@
-# Robots.txt for Andrian Soelistiyo Portfolio
-# Allow all search engines to crawl the entire site
+# robots.txt for Andrian Soelistiyo Portfolio
+# Allow all search engines to crawl the site
 
 User-agent: *
-Allow: /
+Disallow:
 
 # Sitemap location
-Sitemap: https://andrian-portfolio.netlify.app/sitemap.xml
+Sitemap: https://andriansoelistiyo-portfolio.netlify.app/sitemap.xml
 
 # Crawl delay (optional, set to 1 second)
 Crawl-delay: 1
