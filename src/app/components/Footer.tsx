@@ -44,8 +44,8 @@ export function Footer() {
             <div>
               <h4 className="text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4 text-gray-600">Contact</h4>
               <ul className="space-y-2 text-xs sm:text-sm">
-                <li className="break-all">andrian.soegimedia@gmail.com</li>
-                <li>+62 8778-8087-738</li>
+                <li className="break-all">andrian.socialmedia@gmail.com</li>
+                <li>+62 877-8808-7738</li>
                 <li>Kota Tangerang, Banten</li>
               </ul>
             </div>
