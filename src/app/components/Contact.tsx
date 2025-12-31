@@ -1,4 +1,5 @@
 import { Mail, Linkedin, Phone, MapPin, Clock } from 'lucide-react';
+import { trackContactClick } from '../../utils/analytics';
 
 export function Contact() {
   return (
@@ -23,6 +24,7 @@ export function Contact() {
               <div className="space-y-4">
                 <a
                   href="mailto:andrian.socialmedia@gmail.com"
+                  onClick={() => trackContactClick('email', 'contact_section_list')}
                   className="flex items-start gap-3 text-sm sm:text-base hover:underline break-all group"
                 >
                   <Mail className="h-5 w-5 mt-0.5 flex-shrink-0 text-gray-600 group-hover:text-black transition-colors" />
@@ -32,6 +34,7 @@ export function Contact() {
                   href="https://wa.me/6287788087738?text=Hi%20Andrian%2C%20I%20found%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20project%20opportunity%20with%20you."
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContactClick('whatsapp', 'contact_section_list')}
                   className="flex items-center gap-3 text-sm sm:text-base hover:underline group"
                 >
                   <Phone className="h-5 w-5 flex-shrink-0 text-gray-600 group-hover:text-black transition-colors" />
@@ -41,6 +44,7 @@ export function Contact() {
                   href="https://www.linkedin.com/in/andrian-soelistiyo-6a9324a1/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContactClick('linkedin', 'contact_section_list')}
                   className="flex items-center gap-3 text-sm sm:text-base hover:underline group"
                 >
                   <Linkedin className="h-5 w-5 flex-shrink-0 text-gray-600 group-hover:text-black transition-colors" />
@@ -79,6 +83,7 @@ export function Contact() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="mailto:andrian.socialmedia@gmail.com"
+                onClick={() => trackContactClick('email', 'contact_section_cta')}
                 className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-black text-white text-xs sm:text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors"
               >
                 <Mail className="h-4 w-4" />
@@ -88,6 +93,7 @@ export function Contact() {
                 href="https://wa.me/6287788087738?text=Hi%20Andrian%2C%20I%20found%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20project%20opportunity%20with%20you."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContactClick('whatsapp', 'contact_section_cta')}
                 className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 border border-gray-300 bg-white text-gray-700 text-xs sm:text-sm uppercase tracking-wider hover:bg-gray-100 transition-colors"
               >
                 <Phone className="h-4 w-4" />

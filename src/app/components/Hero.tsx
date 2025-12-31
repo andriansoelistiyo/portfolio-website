@@ -1,7 +1,9 @@
 import { Linkedin, Github, Mail, Phone } from 'lucide-react';
+import { trackContactClick, trackNavigation } from '../../utils/analytics';
 
 export function Hero() {
   const scrollToContact = () => {
+    trackNavigation('contact', 'hero_cta_button');
     const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -9,6 +11,7 @@ export function Hero() {
   };
 
   const scrollToPortfolio = () => {
+    trackNavigation('portfolio', 'hero_cta_button');
     const element = document.getElementById('portfolio');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -68,6 +71,7 @@ export function Hero() {
                     href="https://wa.me/6287788087738?text=Hi%20Andrian%2C%20I%20found%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20project%20opportunity%20with%20you."
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackContactClick('whatsapp', 'hero_sidebar')}
                     className="flex items-center gap-2 text-sm hover:underline"
                   >
                     <Phone className="h-4 w-4" />
@@ -75,6 +79,7 @@ export function Hero() {
                   </a>
                   <a
                     href="mailto:andrian.socialmedia@gmail.com"
+                    onClick={() => trackContactClick('email', 'hero_sidebar')}
                     className="flex items-center gap-2 text-sm hover:underline break-all"
                   >
                     <Mail className="h-4 w-4" />
@@ -84,6 +89,7 @@ export function Hero() {
                     href="https://www.linkedin.com/in/andrian-soelistiyo-6a9324a1/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackContactClick('linkedin', 'hero_sidebar')}
                     className="flex items-center gap-2 text-sm hover:underline"
                   >
                     <Linkedin className="h-4 w-4" />

@@ -1,5 +1,11 @@
+import { trackNavigation } from '../../utils/analytics';
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const handleNavClick = (sectionId: string) => {
+    trackNavigation(sectionId, 'footer');
+  };
 
   return (
     <footer className="bg-white border-t-2 border-black py-6 sm:py-8">
@@ -19,22 +25,22 @@ export function Footer() {
               <h4 className="text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4 text-gray-600">Sections</h4>
               <ul className="space-y-2 text-xs sm:text-sm">
                 <li>
-                  <a href="#about" className="hover:underline">
+                  <a href="#about" className="hover:underline" onClick={() => handleNavClick('about')}>
                     Background
                   </a>
                 </li>
                 <li>
-                  <a href="#portfolio" className="hover:underline">
+                  <a href="#portfolio" className="hover:underline" onClick={() => handleNavClick('portfolio')}>
                     Experience
                   </a>
                 </li>
                 <li>
-                  <a href="#skills" className="hover:underline">
+                  <a href="#skills" className="hover:underline" onClick={() => handleNavClick('skills')}>
                     Skills & Tools
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:underline">
+                  <a href="#contact" className="hover:underline" onClick={() => handleNavClick('contact')}>
                     Contact
                   </a>
                 </li>

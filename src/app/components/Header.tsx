@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { trackNavigation } from '../../utils/analytics';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
+    trackNavigation(id, isMenuOpen ? 'mobile_menu' : 'desktop_menu');
     const element = document.getElementById(id);
     if (element) {
       const headerHeight = document.querySelector('header')?.offsetHeight || 0;

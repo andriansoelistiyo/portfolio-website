@@ -1,4 +1,5 @@
 import { ExternalLink, Lock } from 'lucide-react';
+import { trackProjectClick } from '../../utils/analytics';
 
 export function PersonalProjects() {
   const projects = [
@@ -154,6 +155,7 @@ export function PersonalProjects() {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackProjectClick(project.title, 'visit_project')}
                             className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors border border-black"
                           >
                             <span>Visit Project</span>
