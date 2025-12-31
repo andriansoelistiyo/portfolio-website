@@ -4,6 +4,26 @@ export function PersonalProjects() {
   const projects = [
     {
       id: 1,
+      title: 'QR Code Generator Indonesia',
+      subtitle: 'Free Instant QR Code Generator - No Login Required',
+      period: 'Dec 2025',
+      role: 'Solo Developer & Designer',
+      description: 'Generator QR Code gratis terbaik Indonesia. Buat QR Code untuk URL, teks, WhatsApp, email dalam hitungan detik. Tanpa login, tanpa biaya. Download format PNG berkualitas tinggi.',
+      highlights: [
+        'Built entirely with AI using Figma Make - zero manual coding required',
+        'Instant QR code generation for URLs, text, WhatsApp, and email',
+        'No login or registration required - completely free to use',
+        'High-quality PNG downloads with customizable size options',
+        'Clean, intuitive Indonesian interface optimized for local users',
+        'Lightning-fast performance with client-side generation'
+      ],
+      techStack: ['Figma Make', 'React', 'Tailwind CSS', 'Netlify'],
+      url: 'https://qr-generator-projects.netlify.app/',
+      isPrivate: false,
+      image: 'https://images.unsplash.com/photo-1578317260099-6021237c3391?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxciUyMGNvZGUlMjBzY2FubmVyJTIwcGhvbmV8ZW58MXx8fHwxNzY3MTU3MTMxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    },
+    {
+      id: 2,
       title: 'Holysnap Studio Operations System',
       subtitle: 'Full-Stack Management Platform for Self Photo Booth Studio',
       period: 'Dec 2025',
@@ -24,7 +44,7 @@ export function PersonalProjects() {
       image: 'https://images.unsplash.com/photo-1616900167878-ea2f3331b3e0?crop=entropy&cs=tinysrgb&fit=max&fm=webp&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90byUyMGJvb3RoJTIwc3R1ZGlvfGVufDF8fHx8MTc2NjIwNDEwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     },
     {
-      id: 2,
+      id: 3,
       title: 'Matematika SD-SMP Learning Platform',
       subtitle: 'AI-Powered Educational Platform for Elementary & Middle School Students',
       period: 'Nov 2025',
